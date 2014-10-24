@@ -3,6 +3,8 @@
 
 ## Write a short comment describing this function
 
+#Matrix inversion is usually a costly computation and their may be some benefit to caching the inverse of a matrix rather than compute it repeatedly (there are also alternatives to matrix inversion that we will not discuss here). Your assignment is to write a pair of functions that cache the inverse of a matrix.
+
 #This function creates a special "matrix" object that can cache its inverse.
 makeCacheMatrix <- function(x = matrix()) {
 	m <- NULL
@@ -33,3 +35,7 @@ cacheSolve <- function(x, ...) {
         x$setinverse(m)
         m
 }
+
+#Example used for Run
+#X<-matrix(c(1,2,3, 0,1,4, 5,6,0), nrow=3, ncol=3,byrow=TRUE)
+#cacheSolve(makeCacheMatrix(X))
